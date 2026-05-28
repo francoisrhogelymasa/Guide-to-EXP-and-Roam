@@ -1,0 +1,91 @@
+body {
+    background: linear-gradient(180deg, #0a0f2c, #081028, #040a1a);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding-bottom: 80px;}
+
+h1, h3, h4 {
+    color: #f5d37d;
+    text-shadow: 0 0 10px rgba(255, 215, 100, 0.6);
+    text-align: center;
+}
+
+.center img {
+    display: block;
+    margin: 0 auto;
+}
+@keyframes clickPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+.hero {
+    border-radius: 12px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.hero.glow {
+    box-shadow: 0 0 25px 8px rgba(255, 215, 100, 0.7);
+}
+
+.hero.clicked {
+    animation: clickPop 0.15s ease-out;
+}
+
+@keyframes clickPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+
+.info {
+    opacity: 0;
+    color: #f5d37d;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 18px;
+    transition: opacity 0.4s ease;
+}
+
+.info.show {
+    opacity: 1;
+}
+
+.music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    background: linear-gradient(180deg, #2e3a72, #1c2554);
+    border: 2px solid #f5d37d;
+    border-radius: 10px;
+    color: #f5d37d;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 215, 100, 0.4);
+    transition: 0.2s;
+}
+
+.music-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 215, 100, 0.7);
+}
+.center {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 215, 100, 0.3);
+    border-radius: 12px;
+    padding: 15px;
+    margin: 25px auto;
+    width: 420px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+}
+
+.center:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 215, 100, 0.4);
+}

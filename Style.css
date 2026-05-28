@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(180deg, #0a0f2c, #081028, #040a1a);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding-bottom: 80px;}
+   
+    h1, h2, h3 {
+    color: #f5d37d;
+    text-shadow: 0 0 10px rgba(255, 215, 100, 0.6);
+    text-align: center;}
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.center img {
+    display: block;
+    margin: 0 auto;
+}
+h1 {
+     color:white ; text-align: center; }
