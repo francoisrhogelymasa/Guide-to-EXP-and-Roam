@@ -1,0 +1,4 @@
+1. My website is about Mobile Legends: Bang Bang, because I play this game a lot, and I think I am quite knowledgeable with the game.
+2. The most difficult part about building the site was finding naming errors, because I would have to re-read the entire code to make sure Meta and meta were different, because wrong spellings led to invalid code, I had to make sure that the files were also in the right directories/locations.
+3. I am proud of the interactive feature where if you click on a hero's image it plays their voice lines.
+4. If I had more time, I would try adding videos to demonstrate each hero's skills and how to play them, because I couldn't figure out how to add videos to the website because I don't think my browser can run certain video files.

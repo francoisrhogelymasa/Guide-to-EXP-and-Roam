@@ -1,12 +1,9 @@
 document.querySelectorAll(".hero").forEach(img => {
     img.addEventListener("click", function() {
         let textBox = this.parentElement.querySelector(".info");
-
-     
         this.classList.add("clicked");
         setTimeout(() => this.classList.remove("clicked"), 150);
 
-     
         if (textBox.classList.contains("show")) {
             textBox.classList.remove("show");
             textBox.textContent = "";
@@ -14,12 +11,10 @@ document.querySelectorAll(".hero").forEach(img => {
             return;
         }
 
-     
         textBox.textContent = this.dataset.text;
         textBox.classList.add("show");
         this.classList.add("glow");
 
-      
         let sound = new Audio(this.dataset.audio);
         sound.play();
     });
@@ -28,14 +23,12 @@ document.querySelectorAll(".hero").forEach(img => {
 const bgm = document.getElementById("bgm");
 const toggleBtn = document.getElementById("musicToggle");
 
-
 document.addEventListener("click", () => {
     if (bgm.paused) {
         bgm.play();
     }
 }, { once: true });
 
-// Toggle button
 toggleBtn.addEventListener("click", () => {
     if (bgm.paused) {
         bgm.play();
@@ -46,3 +39,24 @@ toggleBtn.addEventListener("click", () => {
     }
 });
 
+const volumeSlider = document.getElementById("volumeSlider");
+volumeSlider.addEventListener("input", () => {
+    bgm.volume = volumeSlider.value / 100;
+});
+
+function createParticle() {
+    const particles = document.getElementById("particles");
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
+    particle.style.left = Math.random() * 100 + "vw";
+    const size = Math.random() * 6 + 4;
+    particle.style.width = size + "px";
+    particle.style.height = size + "px";
+    particle.style.animationDuration = (Math.random() * 3 + 4) + "s";
+    particles.appendChild(particle);
+    setTimeout(() => {
+        particle.remove();
+    }, 7000);
+}
+
+setInterval(createParticle, 300);
